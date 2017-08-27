@@ -1,9 +1,5 @@
 <?php
 
-$database = require 'bootstrap.php';
+require 'core/bootstrap.php';
 
-$tasks = $database->selectAll('todos');
-
-dd($tasks);
-
-require 'index.view.php';
+require Router::load('routes.php')->direct(Requests::uri());
