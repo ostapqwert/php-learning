@@ -6,10 +6,23 @@
 
         <body>
             <ul>
-                <li><strong>Ttile: </strong><?php echo $task['title']; ?></li>
-                <li><strong>Due Date: </strong><?php echo $task['due']; ?></li>
-                <li><strong>Person responsibility </strong><?php echo $task['assigned_to']; ?></li>
-                <li><strong>Status </strong><?php echo ($task['complited'] ? 'complited' : 'not complited') ?></li>
+
+                <?php foreach($tasks as $task): ?>
+                <li><strong>Ttile: </strong>
+
+                    <?php if($task->completed): ?>
+
+                        <strike><?php echo $task->getDescription(); ?></strike>
+
+                        <?php else: ?>
+
+                             <?php echo $task->getDescription(); ?>
+
+                        <?php endif; ?>
+
+
+                </li>
+                <?php endforeach; ?>
             </ul>
         </body>
 

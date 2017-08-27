@@ -1,11 +1,10 @@
 <?php
 
-$task = [
-    'title' => 'finish homework',
-    'due' => 'today',
-    'assigned_to' => 'Jeffery',
-    'complited' => false
-];
+require 'functions.php';
+require 'Task.php';
 
+$pdo = connectToDB();
+
+$tasks = fetchAllTasks($pdo);
 
 require 'index.view.php';
