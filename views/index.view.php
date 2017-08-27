@@ -1,19 +1,5 @@
-<html>
-
-    <head>
-        <title>php learning</title>
-    </head>
-
-        <body>
-
-        <nav>
-            <ul>
-                <li><a href="/">Main page</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contacts">Contacts</a></li>
-
-            </ul>
-        </nav>
+<?php require ('partials/head.view.php')?>
+<?php require ('partials/navigation.php'); ?>
 
             <ul>
 
@@ -34,6 +20,5 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
-        </body>
 
-</html>
+<?php require ('partials/footer.view.php')?>
