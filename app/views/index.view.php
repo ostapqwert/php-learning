@@ -1,5 +1,5 @@
-<?php require ('partials/head.view.php')?>
-<?php require ('partials/navigation.php'); ?>
+<?php require('partials/head.view.php') ?>
+<?php require('partials/navigation.php'); ?>
 
 <ul>
 <?php foreach ($users as $user): ?>
@@ -13,4 +13,4 @@
     </form>
 
 
-<?php require ('partials/footer.view.php')?>
+<?php require('partials/footer.view.php') ?>

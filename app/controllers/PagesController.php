@@ -12,7 +12,7 @@ class PagesController
 
         $tasks = App::get('database')->selectAll('todos');
 
-        require 'views/index.view.php';
+        return view('index');
 
     }
 
@@ -28,7 +28,8 @@ class PagesController
     {
 
         App::get('database')->insert('users', ['name'=>'mani']);
-        require 'views/about.view.php';
+
+        return view('about');
 
     }
 

@@ -10,6 +10,6 @@ function view($view, $data = null)
     if($data)
         extract($data);
 
-    require "views/{$view}.view.php";
+    require "app/views/{$view}.view.php";
 }
 
