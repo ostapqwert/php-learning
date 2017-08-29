@@ -1,10 +1,15 @@
 <?php
+use App\Core\App;
 
-$app = [];
+App::bind('config', require 'config.php');
+App::bind('database', new QueryBuilder(Connection::make(App::get('config')['database'])));
 
-$app['config'] = require 'config.php';
 
-require 'vendor/autoload.php';
+function view($view, $data = null)
+{
+    if($data)
+        extract($data);
 
-$app['database'] = new QueryBuilder(Connection::make($app['config']['database']));
+    require "views/{$view}.view.php";
+}
 
